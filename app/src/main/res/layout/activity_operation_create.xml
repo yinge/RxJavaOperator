@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0099cc"
+    tools:context=".ui.OperationCreateActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <Button
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:background="@null"
+                android:text="创建操作符"
+                android:textColor="#fff"
+                android:textSize="20sp" />
+
+            <android.support.v7.widget.AppCompatImageView
+                android:onClick="back"
+                android:src="@drawable/ic_action_name"
+                android:layout_width="50dp"
+                android:layout_height="match_parent" />
+
+        </RelativeLayout>
+
+
+        <Button
+            android:id="@+id/btn_create"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/btn_back"
+            android:gravity="center"
+            android:onClick="operationCreate"
+            android:text="CREATE"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
+        <Button
+            android:id="@+id/btn_just"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/btn_back"
+            android:gravity="center"
+            android:onClick="operationJust"
+            android:text="JUST"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
+        <Button
+            android:id="@+id/btn_from_array"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/btn_back"
+            android:gravity="center"
+            android:onClick="operationFromArray"
+            android:text="FROMARRAY"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
+        <Button
+            android:id="@+id/btn_from_callable"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/btn_back"
+            android:gravity="center"
+            android:onClick="operationFromCallable"
+            android:text="FROMCALLABLE"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
+        <Button
+            android:id="@+id/btn_from_future"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/btn_back"
+            android:gravity="center"
+            android:onClick="operationFromFuture"
+            android:text="FROMFUTURE"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
+        <Button
+            android:id="@+id/btn_from_iterable"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/btn_back"
+            android:gravity="center"
+            android:onClick="operationFromIterable"
+            android:text="FROMITERABLE"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
+        <Button
+            android:id="@+id/btn_empty"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/btn_back"
+            android:gravity="center"
+            android:onClick="operationEmpty"
+            android:text="EMPTY"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
+        <Button
+            android:id="@+id/btn_error"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/btn_back"
+            android:gravity="center"
+            android:onClick="operationError"
+            android:text="ERROR"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
+        <Button
+            android:id="@+id/btn_never"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/btn_back"
+            android:gravity="center"
+            android:onClick="operationNever"
+            android:text="NEVER"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
+        <Button
+            android:id="@+id/btn_defer"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/btn_back"
+            android:gravity="center"
+            android:onClick="operationDefer"
+            android:text="DEFER"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
+
+        <Button
+            android:id="@+id/btn_timer"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/btn_back"
+            android:gravity="center"
+            android:onClick="operationTimer"
+            android:text="TIMER"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
+        <Button
+            android:id="@+id/btn_interval"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/btn_back"
+            android:gravity="center"
+            android:onClick="operationInterval"
+            android:text="INTERVAL"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
+        <Button
+            android:id="@+id/btn_intervalRange"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/btn_back"
+            android:gravity="center"
+            android:onClick="operationIntervalRange"
+            android:text="INTERVALRANGE"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
+        <Button
+            android:id="@+id/btn_range"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/btn_back"
+            android:gravity="center"
+            android:onClick="operationRange"
+            android:text="RANGE"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
+        <Button
+            android:id="@+id/btn_range_long"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/btn_back"
+            android:gravity="center"
+            android:onClick="operationRangeLong"
+            android:text="RANGELONG"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
+    </LinearLayout>
+
+
+</android.support.v4.widget.NestedScrollView>

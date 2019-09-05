@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0099cc"
+    tools:context=".ui.OperationCombinationActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:background="@null"
+                android:gravity="center"
+                android:text="组合/合并操作符"
+                android:textColor="#fff"
+                android:textSize="20sp" />
+
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:onClick="back"
+                android:src="@drawable/ic_action_name" />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_Concat"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/btn_back"
+            android:gravity="center"
+            android:onClick="operationConcat"
+            android:text="CONCAT"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
+        <Button
+            android:id="@+id/btn_concat_array"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/btn_back"
+            android:gravity="center"
+            android:onClick="operationConcatArray"
+            android:text="CONCATARRAY"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
+        <Button
+            android:id="@+id/btn_ConcatDelayError"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/btn_back"
+            android:gravity="center"
+            android:onClick="operationConcatDelayError"
+            android:text="ConcatDelayError"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
+        <Button
+            android:id="@+id/btn_merge"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/btn_back"
+            android:gravity="center"
+            android:onClick="operationMerge"
+            android:text="MERGE"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
+        <Button
+            android:id="@+id/btn_MergeArray"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/btn_back"
+            android:gravity="center"
+            android:onClick="operationMergeArray"
+            android:text="MERGEARRAY"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
+        <Button
+            android:id="@+id/btn_MergeDelayError"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/btn_back"
+            android:gravity="center"
+            android:onClick="operationMergeDelayError"
+            android:text="MERGEDELAYERROR"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
+        <Button
+            android:id="@+id/btn_zip"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/btn_back"
+            android:gravity="center"
+            android:onClick="operationZip"
+            android:text="ZIP"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
+        <Button
+            android:id="@+id/btn_combineLatest"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/btn_back"
+            android:gravity="center"
+            android:onClick="operationCombineLatest"
+            android:text="COMBINELATEST"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
+        <Button
+            android:id="@+id/btn_combineLatestDelayError"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/btn_back"
+            android:gravity="center"
+            android:onClick="operationCombineLatestDelayError"
+            android:text="COMBINELATESTDELAYERROR"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>
