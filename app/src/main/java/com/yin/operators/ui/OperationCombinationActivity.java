@@ -57,4 +57,24 @@ public class OperationCombinationActivity extends BaseActivity {
     public void operationCombineLatestDelayError(View view) {
         new OperationCombineLatestDelayError().createOperation().send(this);
     }
+
+    public void operationReduce(View view) {
+        operationTo(new OperationReduce());
+    }
+
+    public void operationCollect(View view) {
+        operationTo(new OperationCollect());
+    }
+
+    public void operationStartWith(View view) {
+        operationTo(new OperationStartWith());
+    }
+
+    public void operationStartWithArray(View view) {
+        operationTo(new OperationStartWithArray());
+    }
+
+    public void operationCount(View view) {
+        operationTo(new OperationCount());
+    }
 }

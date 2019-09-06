@@ -1,5 +1,6 @@
 package com.yin.operators.operation.combination;
 
+import com.yin.operators.StringEnum;
 import com.yin.operators.operation.Operation;
 
 import io.reactivex.Observable;
@@ -20,8 +21,12 @@ public class OperationReduce implements Operation {
     @Override
     public Operation createOperation() {
         Observable.just(1, 2, 3, 4)
-                .reduce((integer, integer2) -> integer + integer2)
-                .subscribe(integer -> builder.append(integer).append("\n"));
+                .reduce((integer, integer2) -> {
+                    builder.append("第一个值---").append(integer);
+                    builder.append("第二个值---").append(integer);
+                    return integer + integer2;
+                })
+                .subscribe(integer -> builder.append(StringEnum.NEXT_MESSAGE).append(integer).append("\n"));
         return this;
     }
 }

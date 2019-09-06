@@ -164,6 +164,81 @@
             android:textColor="#fff"
             android:textSize="20sp" />
 
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
+        <Button
+            android:id="@+id/btn_reduce"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/btn_back"
+            android:gravity="center"
+            android:onClick="operationReduce"
+            android:text="REDUCE"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
+        <Button
+            android:id="@+id/btn_collect"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/btn_back"
+            android:gravity="center"
+            android:onClick="operationCollect"
+            android:text="COLLECT"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
+        <Button
+            android:id="@+id/btn_StartWith"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/btn_back"
+            android:gravity="center"
+            android:onClick="operationStartWith"
+            android:text="StartWith"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
+        <Button
+            android:id="@+id/btn_StartWithArray"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/btn_back"
+            android:gravity="center"
+            android:onClick="operationStartWithArray"
+            android:text="StartWithArray"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
+        <Button
+            android:id="@+id/btn_count"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/btn_back"
+            android:gravity="center"
+            android:onClick="operationCount"
+            android:text="COUNT"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+
     </LinearLayout>
 
 </android.support.v4.widget.NestedScrollView>
