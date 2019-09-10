@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">RetrofitDemo</string>
+    <string name="app_name">RxJavaOperator</string>
 
     <string name="title_activity_operation">OperationActivity</string>
     <string name="dummy_button">Dummy Button</string>
