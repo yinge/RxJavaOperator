@@ -1,88 +1,72 @@
 package com.yin.operators.ui;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 
+import com.yin.operators.BaseActivity;
 import com.yin.operators.R;
-import com.yin.operators.operation.create.OperationCreate;
-import com.yin.operators.operation.create.OperationDefer;
-import com.yin.operators.operation.create.OperationEmpty;
-import com.yin.operators.operation.create.OperationError;
-import com.yin.operators.operation.create.OperationFromArray;
-import com.yin.operators.operation.create.OperationFromCallable;
-import com.yin.operators.operation.create.OperationFromIterable;
-import com.yin.operators.operation.create.OperationFuture;
-import com.yin.operators.operation.create.OperationInterval;
-import com.yin.operators.operation.create.OperationIntervalRange;
-import com.yin.operators.operation.create.OperationJust;
-import com.yin.operators.operation.create.OperationNever;
-import com.yin.operators.operation.create.OperationRange;
-import com.yin.operators.operation.create.OperationRangeLong;
-import com.yin.operators.operation.create.OperationTimer;
+import com.yin.operators.operation.create.*;
 
-public class OperationCreateActivity extends AppCompatActivity {
+public class OperationCreateActivity extends BaseActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_operation_create);
+    public int getLayoutId() {
+        return R.layout.activity_operation_create;
     }
 
     public void operationCreate(View view) {
-        new OperationCreate().createOperation().send(this);
+        operationTo(new OperationCreate());
     }
 
     public void operationJust(View view) {
-        new OperationJust().createOperation();
+        operationTo(new OperationJust());
     }
 
     public void operationFromArray(View view) {
-        new OperationFromArray().createOperation();
+        operationTo(new OperationFromArray());
     }
 
     public void operationFromCallable(View view) {
-        new OperationFromCallable().createOperation();
+        operationTo(new OperationFromCallable());
     }
 
     public void operationFromIterable(View view) {
-        new OperationFromIterable().createOperation();
+        operationTo(new OperationFromIterable());
     }
 
     public void operationEmpty(View view) {
-        new OperationEmpty().createOperation();
+        operationTo(new OperationEmpty());
     }
 
     public void operationError(View view) {
-        new OperationError().createOperation();
+        operationTo(new OperationError());
     }
 
     public void operationNever(View view) {
-        new OperationNever().createOperation();
+        operationTo(new OperationNever());
     }
 
     public void operationDefer(View view) {
-        new OperationDefer().createOperation();
+        operationTo(new OperationDefer());
     }
 
     public void operationTimer(View view) {
-        new OperationTimer().createOperation();
+        operationTo(new OperationTimer());
     }
 
     public void operationInterval(View view) {
-        new OperationInterval().createOperation();
+        operationTo(new OperationInterval());
     }
 
     public void operationIntervalRange(View view) {
-        new OperationIntervalRange().createOperation();
+        operationTo(new OperationIntervalRange());
     }
 
     public void operationRange(View view) {
-        new OperationRange().createOperation();
+        operationTo(new OperationRange());
     }
 
     public void operationRangeLong(View view) {
-        new OperationRangeLong().createOperation();
+        operationTo(new OperationRangeLong());
     }
 
     public void back(View view) {
@@ -90,6 +74,6 @@ public class OperationCreateActivity extends AppCompatActivity {
     }
 
     public void operationFromFuture(View view) {
-        new OperationFuture().createOperation();
+        operationTo(new OperationFuture());
     }
 }

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#0099cc"
-    tools:context=".ui.OperationCreateActivity">
+    tools:context=".ui.OperationFunctionActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,7 +21,7 @@
                 android:layout_centerInParent="true"
                 android:background="@null"
                 android:gravity="center"
-                android:text="创建操作符"
+                android:text="功能操作符"
                 android:textColor="#fff"
                 android:textSize="20sp" />
 
@@ -33,15 +33,14 @@
 
         </RelativeLayout>
 
-
         <Button
-            android:id="@+id/btn_create"
+            android:id="@+id/btn_delay"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:background="@drawable/btn_back"
             android:gravity="center"
-            android:onClick="operationCreate"
-            android:text="create"
+            android:onClick="delay"
+            android:text="delay"
             android:textColor="#fff"
             android:textSize="20sp" />
 
@@ -50,13 +49,13 @@
             android:layout_height="1dp" />
 
         <Button
-            android:id="@+id/btn_just"
+            android:id="@+id/btn_do_on_subscribe"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:background="@drawable/btn_back"
             android:gravity="center"
-            android:onClick="operationJust"
-            android:text="just"
+            android:onClick="doOnSubscribe"
+            android:text="doOnSubscribe"
             android:textColor="#fff"
             android:textSize="20sp" />
 
@@ -65,13 +64,13 @@
             android:layout_height="1dp" />
 
         <Button
-            android:id="@+id/btn_from_array"
+            android:id="@+id/btn_do_on_dispose"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:background="@drawable/btn_back"
             android:gravity="center"
-            android:onClick="operationFromArray"
-            android:text="fromArray"
+            android:onClick="doOnDispose"
+            android:text="doOnDispose"
             android:textColor="#fff"
             android:textSize="20sp" />
 
@@ -80,13 +79,13 @@
             android:layout_height="1dp" />
 
         <Button
-            android:id="@+id/btn_from_callable"
+            android:id="@+id/btn_do_on_next"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:background="@drawable/btn_back"
             android:gravity="center"
-            android:onClick="operationFromCallable"
-            android:text="fromCallable"
+            android:onClick="doOnNext"
+            android:text="doOnNext"
             android:textColor="#fff"
             android:textSize="20sp" />
 
@@ -95,13 +94,13 @@
             android:layout_height="1dp" />
 
         <Button
-            android:id="@+id/btn_from_future"
+            android:id="@+id/btn_do_after_next"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:background="@drawable/btn_back"
             android:gravity="center"
-            android:onClick="operationFromFuture"
-            android:text="fromFuture"
+            android:onClick="doAfterNext"
+            android:text="doAfterNext"
             android:textColor="#fff"
             android:textSize="20sp" />
 
@@ -110,13 +109,13 @@
             android:layout_height="1dp" />
 
         <Button
-            android:id="@+id/btn_from_iterable"
+            android:id="@+id/btn_DoAfterTerminate"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:background="@drawable/btn_back"
             android:gravity="center"
-            android:onClick="operationFromIterable"
-            android:text="fromIterable"
+            android:onClick="doAfterTerminate"
+            android:text="doAfterTerminate"
             android:textColor="#fff"
             android:textSize="20sp" />
 
@@ -125,13 +124,13 @@
             android:layout_height="1dp" />
 
         <Button
-            android:id="@+id/btn_empty"
+            android:id="@+id/btn_doFinally"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:background="@drawable/btn_back"
             android:gravity="center"
-            android:onClick="operationEmpty"
-            android:text="empty"
+            android:onClick="doFinally"
+            android:text="doFinally"
             android:textColor="#fff"
             android:textSize="20sp" />
 
@@ -140,13 +139,13 @@
             android:layout_height="1dp" />
 
         <Button
-            android:id="@+id/btn_error"
+            android:id="@+id/btn_DoOnComplete"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:background="@drawable/btn_back"
             android:gravity="center"
-            android:onClick="operationError"
-            android:text="error"
+            android:onClick="doOnComplete"
+            android:text="doOnComplete"
             android:textColor="#fff"
             android:textSize="20sp" />
 
@@ -155,13 +154,13 @@
             android:layout_height="1dp" />
 
         <Button
-            android:id="@+id/btn_never"
+            android:id="@+id/doOnEach"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:background="@drawable/btn_back"
             android:gravity="center"
-            android:onClick="operationNever"
-            android:text="never"
+            android:onClick="doOnEach"
+            android:text="doOnEach"
             android:textColor="#fff"
             android:textSize="20sp" />
 
@@ -170,29 +169,13 @@
             android:layout_height="1dp" />
 
         <Button
-            android:id="@+id/btn_defer"
+            android:id="@+id/DoOnError"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:background="@drawable/btn_back"
             android:gravity="center"
-            android:onClick="operationDefer"
-            android:text="defer"
-            android:textColor="#fff"
-            android:textSize="20sp" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="1dp" />
-
-
-        <Button
-            android:id="@+id/btn_timer"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:background="@drawable/btn_back"
-            android:gravity="center"
-            android:onClick="operationTimer"
-            android:text="timer"
+            android:onClick="doOnError"
+            android:text="doOnError"
             android:textColor="#fff"
             android:textSize="20sp" />
 
@@ -201,13 +184,13 @@
             android:layout_height="1dp" />
 
         <Button
-            android:id="@+id/btn_interval"
+            android:id="@+id/DoOnLifecycle"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:background="@drawable/btn_back"
             android:gravity="center"
-            android:onClick="operationInterval"
-            android:text="interval"
+            android:onClick="doOnLifecycle"
+            android:text="doOnLifecycle"
             android:textColor="#fff"
             android:textSize="20sp" />
 
@@ -216,13 +199,13 @@
             android:layout_height="1dp" />
 
         <Button
-            android:id="@+id/btn_intervalRange"
+            android:id="@+id/DoOnTerminate"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:background="@drawable/btn_back"
             android:gravity="center"
-            android:onClick="operationIntervalRange"
-            android:text="intervalRange"
+            android:onClick="doOnTerminate"
+            android:text="doOnTerminate"
             android:textColor="#fff"
             android:textSize="20sp" />
 
@@ -231,13 +214,13 @@
             android:layout_height="1dp" />
 
         <Button
-            android:id="@+id/btn_range"
+            android:id="@+id/ObserveOn"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:background="@drawable/btn_back"
             android:gravity="center"
-            android:onClick="operationRange"
-            android:text="range"
+            android:onClick="observeOn"
+            android:text="observeOn"
             android:textColor="#fff"
             android:textSize="20sp" />
 
@@ -246,21 +229,151 @@
             android:layout_height="1dp" />
 
         <Button
-            android:id="@+id/btn_range_long"
+            android:id="@+id/OnErrorResumeNext"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:background="@drawable/btn_back"
             android:gravity="center"
-            android:onClick="operationRangeLong"
-            android:text="rangeLong"
+            android:onClick="onErrorResumeNext"
+            android:text="onErrorResumeNext"
             android:textColor="#fff"
             android:textSize="20sp" />
 
         <Space
             android:layout_width="match_parent"
             android:layout_height="1dp" />
+
+        <Button
+            android:id="@+id/OnErrorReturn"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/btn_back"
+            android:gravity="center"
+            android:onClick="onErrorReturn"
+            android:text="onErrorReturn"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
+        <Button
+            android:id="@+id/OnExceptionResumeNext"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/btn_back"
+            android:gravity="center"
+            android:onClick="onExceptionResumeNext"
+            android:text="onExceptionResumeNext"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
+        <Button
+            android:id="@+id/Repeat"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/btn_back"
+            android:gravity="center"
+            android:onClick="repeat"
+            android:text="repeat"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
+        <Button
+            android:id="@+id/RepeatUntil"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/btn_back"
+            android:gravity="center"
+            android:onClick="repeatUntil"
+            android:text="repeatUntil"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
+        <Button
+            android:id="@+id/RepeatWhen"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/btn_back"
+            android:gravity="center"
+            android:onClick="repeatWhen"
+            android:text="repeatWhen"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
+        <Button
+            android:id="@+id/Retry"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/btn_back"
+            android:gravity="center"
+            android:onClick="retry"
+            android:text="retry"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
+        <Button
+            android:id="@+id/RetryUntil"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/btn_back"
+            android:gravity="center"
+            android:onClick="retryUntil"
+            android:text="retryUntil"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
+        <Button
+            android:id="@+id/RetryWhen"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/btn_back"
+            android:gravity="center"
+            android:onClick="retryWhen"
+            android:text="retryWhen"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
+        <Button
+            android:id="@+id/SubscribeOn"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/btn_back"
+            android:gravity="center"
+            android:onClick="subscribeOn"
+            android:text="subscribeOn"
+            android:textColor="#fff"
+            android:textSize="20sp" />
 
     </LinearLayout>
-
 
 </android.support.v4.widget.NestedScrollView>

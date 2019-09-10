@@ -1,7 +1,5 @@
 package com.yin.operators.operation.create;
 
-import android.util.Log;
-
 import com.yin.operators.StringEnum;
 import com.yin.operators.operation.Operation;
 
@@ -25,14 +23,14 @@ public class OperationFromCallable implements Operation {
     }
 
     private void handleNext(String s){
-        Log.e(getTag(), StringEnum.NEXT_MESSAGE + s);
+        builder.append(StringEnum.NEXT_MESSAGE).append(s).append('\n');
     }
 
     private void handleError(Throwable throwable){
-        Log.e(getTag(), StringEnum.ERROR_MESSAGE);
+        builder.append(StringEnum.ERROR_MESSAGE).append('\n');
     }
 
     private void handleComplete(){
-        Log.e(getTag(), StringEnum.COMPLETE_MESSAGE);
+        builder.append(StringEnum.COMPLETE_MESSAGE).append('\n');
     }
 }

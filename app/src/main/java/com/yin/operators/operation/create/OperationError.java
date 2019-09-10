@@ -1,7 +1,6 @@
 package com.yin.operators.operation.create;
 
-import android.util.Log;
-
+import com.yin.operators.StringEnum;
 import com.yin.operators.operation.Operation;
 
 import io.reactivex.Observable;
@@ -24,22 +23,22 @@ public class OperationError implements Operation {
         Observable.error(new Throwable()).subscribe(new Observer<Object>() {
             @Override
             public void onSubscribe(Disposable d) {
-                Log.e(getTag(), "我连上了。。。");
+                builder.append(StringEnum.CONNECT_MESSAGE).append('\n');
             }
 
             @Override
             public void onNext(Object object) {
-                Log.e(getTag(), "下一个。。。" + object);
+                builder.append(StringEnum.NEXT_MESSAGE + object).append('\n');
             }
 
             @Override
             public void onError(Throwable e) {
-                Log.e(getTag(), "我错了。。。");
+                builder.append(StringEnum.ERROR_MESSAGE).append('\n');
             }
 
             @Override
             public void onComplete() {
-                Log.e(getTag(), "我完了。。。");
+                builder.append(StringEnum.COMPLETE_MESSAGE).append('\n');
             }
         });
         return this;

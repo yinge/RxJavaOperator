@@ -3,6 +3,7 @@ package com.yin.operators;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
@@ -27,7 +28,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void operationTo(Operation operation) {
+    public void operationTo(@NonNull Operation operation) {
         operation.createOperation().send(this);
     }
 }

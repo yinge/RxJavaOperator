@@ -1,7 +1,6 @@
 package com.yin.operators.operation.create;
 
-import android.util.Log;
-
+import com.yin.operators.StringEnum;
 import com.yin.operators.operation.Operation;
 
 import java.util.concurrent.TimeUnit;
@@ -27,22 +26,22 @@ public class OperationInterval implements Operation {
         Observable.interval(5,1, TimeUnit.SECONDS).subscribe(new Observer<Long>() {
             @Override
             public void onSubscribe(Disposable d) {
-
+                builder.append(StringEnum.CONNECT_MESSAGE).append('\n');
             }
 
             @Override
             public void onNext(Long aLong) {
-                Log.e(getTag(), "下一个。。。" + aLong);
+                builder.append(StringEnum.NEXT_MESSAGE + aLong).append('\n');
             }
 
             @Override
             public void onError(Throwable e) {
-
+                builder.append(StringEnum.ERROR_MESSAGE).append('\n');
             }
 
             @Override
             public void onComplete() {
-                Log.e(getTag(), "我完了。。。");
+                builder.append(StringEnum.COMPLETE_MESSAGE).append('\n');
             }
         });
         return this;

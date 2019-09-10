@@ -31,7 +31,7 @@ public class OperationCreate implements Operation {
         observable.subscribe(new Observer<Integer>() {
             @Override
             public void onSubscribe(Disposable d) {
-                builder.append("我连上了。。。").append('\n');
+                builder.append(StringEnum.CONNECT_MESSAGE).append('\n');
             }
 
             @Override

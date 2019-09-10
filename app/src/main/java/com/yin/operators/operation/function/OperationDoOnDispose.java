@@ -1,45 +1,46 @@
-package com.yin.operators.operation.create;
+package com.yin.operators.operation.function;
 
 import com.yin.operators.StringEnum;
 import com.yin.operators.operation.Operation;
-
-import java.util.concurrent.FutureTask;
-import java.util.concurrent.TimeUnit;
 
 import io.reactivex.Observable;
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
 
 /**
- * at 2019/8/29
- * at 15:41
- * summary:
+ * at 2019/9/6
+ * at 14:57
+ * summary:Disposable 的 dispose() 之后回调该方法
  */
-public class OperationFuture implements Operation {
+public class OperationDoOnDispose implements Operation {
     @Override
     public String getTag() {
-        return getClass().getName();
+        return null;
     }
 
     @Override
     public Operation createOperation() {
-        FutureTask<String> futureTask = new FutureTask<>(
-                () -> "我就是结果"
-        );
+        Observable<Integer> integerObservable =
+                Observable.create(emitter -> {
+                    emitter.onNext(1);
+                    emitter.onNext(2);
+                    emitter.onNext(3);
+                    emitter.onComplete();
+                });
+        integerObservable.doOnDispose(() -> builder.append("doOnDispose").append('\n'))
+                .subscribe(new Observer<Integer>() {
+                    private Disposable d;
 
-        Observable.fromFuture(futureTask, 5, TimeUnit.SECONDS)
-                .doOnSubscribe(
-                        disposable -> futureTask.run()
-                )
-                .subscribe(new Observer<String>() {
                     @Override
                     public void onSubscribe(Disposable d) {
                         builder.append(StringEnum.CONNECT_MESSAGE).append('\n');
+                        this.d = d;
                     }
 
                     @Override
-                    public void onNext(String s) {
-                        builder.append(StringEnum.NEXT_MESSAGE + s).append('\n');
+                    public void onNext(Integer integer) {
+                        builder.append(StringEnum.NEXT_MESSAGE + integer).append('\n');
+                        d.dispose();
                     }
 
                     @Override
@@ -52,6 +53,7 @@ public class OperationFuture implements Operation {
                         builder.append(StringEnum.COMPLETE_MESSAGE).append('\n');
                     }
                 });
+
         return this;
     }
 }

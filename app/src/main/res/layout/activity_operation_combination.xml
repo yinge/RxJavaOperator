@@ -40,7 +40,7 @@
             android:background="@drawable/btn_back"
             android:gravity="center"
             android:onClick="operationConcat"
-            android:text="CONCAT"
+            android:text="concat"
             android:textColor="#fff"
             android:textSize="20sp" />
 
@@ -55,7 +55,7 @@
             android:background="@drawable/btn_back"
             android:gravity="center"
             android:onClick="operationConcatArray"
-            android:text="CONCATARRAY"
+            android:text="concatArray"
             android:textColor="#fff"
             android:textSize="20sp" />
 
@@ -70,7 +70,7 @@
             android:background="@drawable/btn_back"
             android:gravity="center"
             android:onClick="operationConcatDelayError"
-            android:text="ConcatDelayError"
+            android:text="concatDelayError"
             android:textColor="#fff"
             android:textSize="20sp" />
 
@@ -85,7 +85,7 @@
             android:background="@drawable/btn_back"
             android:gravity="center"
             android:onClick="operationMerge"
-            android:text="MERGE"
+            android:text="merge"
             android:textColor="#fff"
             android:textSize="20sp" />
 
@@ -100,7 +100,7 @@
             android:background="@drawable/btn_back"
             android:gravity="center"
             android:onClick="operationMergeArray"
-            android:text="MERGEARRAY"
+            android:text="mergeArray"
             android:textColor="#fff"
             android:textSize="20sp" />
 
@@ -115,7 +115,7 @@
             android:background="@drawable/btn_back"
             android:gravity="center"
             android:onClick="operationMergeDelayError"
-            android:text="MERGEDELAYERROR"
+            android:text="mergeDelayError"
             android:textColor="#fff"
             android:textSize="20sp" />
 
@@ -130,7 +130,7 @@
             android:background="@drawable/btn_back"
             android:gravity="center"
             android:onClick="operationZip"
-            android:text="ZIP"
+            android:text="zip"
             android:textColor="#fff"
             android:textSize="20sp" />
 
@@ -145,7 +145,7 @@
             android:background="@drawable/btn_back"
             android:gravity="center"
             android:onClick="operationCombineLatest"
-            android:text="COMBINELATEST"
+            android:text="combineLatest"
             android:textColor="#fff"
             android:textSize="20sp" />
 
@@ -160,7 +160,7 @@
             android:background="@drawable/btn_back"
             android:gravity="center"
             android:onClick="operationCombineLatestDelayError"
-            android:text="COMBINELATESTDELAYERROR"
+            android:text="combineLatestDelayError"
             android:textColor="#fff"
             android:textSize="20sp" />
 
@@ -175,7 +175,7 @@
             android:background="@drawable/btn_back"
             android:gravity="center"
             android:onClick="operationReduce"
-            android:text="REDUCE"
+            android:text="reduce"
             android:textColor="#fff"
             android:textSize="20sp" />
 
@@ -190,7 +190,7 @@
             android:background="@drawable/btn_back"
             android:gravity="center"
             android:onClick="operationCollect"
-            android:text="COLLECT"
+            android:text="collect"
             android:textColor="#fff"
             android:textSize="20sp" />
 
@@ -205,7 +205,7 @@
             android:background="@drawable/btn_back"
             android:gravity="center"
             android:onClick="operationStartWith"
-            android:text="StartWith"
+            android:text="startWith"
             android:textColor="#fff"
             android:textSize="20sp" />
 
@@ -220,7 +220,7 @@
             android:background="@drawable/btn_back"
             android:gravity="center"
             android:onClick="operationStartWithArray"
-            android:text="StartWithArray"
+            android:text="startWithArray"
             android:textColor="#fff"
             android:textSize="20sp" />
 
@@ -235,7 +235,7 @@
             android:background="@drawable/btn_back"
             android:gravity="center"
             android:onClick="operationCount"
-            android:text="COUNT"
+            android:text="count"
             android:textColor="#fff"
             android:textSize="20sp" />
 

@@ -40,7 +40,7 @@
             android:background="@drawable/btn_back"
             android:gravity="center"
             android:onClick="operationMap"
-            android:text="MAP"
+            android:text="map"
             android:textColor="#fff"
             android:textSize="20sp" />
 
@@ -55,7 +55,7 @@
             android:background="@drawable/btn_back"
             android:gravity="center"
             android:onClick="operationFlatMap"
-            android:text="FLATMAP"
+            android:text="flatMap"
             android:textColor="#fff"
             android:textSize="20sp" />
 
@@ -70,7 +70,7 @@
             android:background="@drawable/btn_back"
             android:gravity="center"
             android:onClick="operationConcatMap"
-            android:text="CONCATMAP"
+            android:text="concatMap"
             android:textColor="#fff"
             android:textSize="20sp" />
 
@@ -85,7 +85,7 @@
             android:background="@drawable/btn_back"
             android:gravity="center"
             android:onClick="operationBuffer"
-            android:text="BUFFER"
+            android:text="buffer"
             android:textColor="#fff"
             android:textSize="20sp" />
 
@@ -100,7 +100,7 @@
             android:background="@drawable/btn_back"
             android:gravity="center"
             android:onClick="operationGroupBy"
-            android:text="GROUPBY"
+            android:text="groupBy"
             android:textColor="#fff"
             android:textSize="20sp" />
 
@@ -115,7 +115,7 @@
             android:background="@drawable/btn_back"
             android:gravity="center"
             android:onClick="operationScan"
-            android:text="SCAN"
+            android:text="scan"
             android:textColor="#fff"
             android:textSize="20sp" />
 
@@ -130,7 +130,7 @@
             android:background="@drawable/btn_back"
             android:gravity="center"
             android:onClick="operationWindow"
-            android:text="WINDOW"
+            android:text="window"
             android:textColor="#fff"
             android:textSize="20sp" />
 

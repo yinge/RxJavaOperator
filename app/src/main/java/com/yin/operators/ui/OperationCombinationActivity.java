@@ -27,35 +27,35 @@ public class OperationCombinationActivity extends BaseActivity {
     }
 
     public void operationConcatArray(View view) {
-        new OperationConcatArray().createOperation().send(this);
+        operationTo(new OperationConcatArray());
     }
 
     public void operationMerge(View view) {
-        new OperationMerge().createOperation().send(this);
+        operationTo(new OperationMerge());
     }
 
     public void operationMergeArray(View view) {
-        new OperationMergeArray().createOperation().send(this);
+        operationTo(new OperationMergeArray());
     }
 
     public void operationConcatDelayError(View view) {
-        new OperationConcatDelayError().createOperation().send(this);
+        operationTo(new OperationConcatDelayError());
     }
 
     public void operationMergeDelayError(View view) {
-        new OperationMergeDelayError().createOperation().send(this);
+        operationTo(new OperationMergeDelayError());
     }
 
     public void operationZip(View view) {
-        new OperationZip().createOperation().send(this);
+        operationTo(new OperationZip());
     }
 
     public void operationCombineLatest(View view){
-        new OperationCombineLatest().createOperation().send(this);
+        operationTo(new OperationCombineLatest());
     }
 
     public void operationCombineLatestDelayError(View view) {
-        new OperationCombineLatestDelayError().createOperation().send(this);
+        operationTo(new OperationCombineLatestDelayError());
     }
 
     public void operationReduce(View view) {

@@ -1,34 +1,42 @@
-package com.yin.operators.operation.create;
+package com.yin.operators.operation.function;
 
 import com.yin.operators.StringEnum;
 import com.yin.operators.operation.Operation;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import io.reactivex.Observable;
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
 
 /**
- * at 2019/4/24
- * at 15:51
+ * at 2019/9/9
+ * at 16:43
  * summary:
  */
-public class OperationFromIterable implements Operation {
+public class OperationRepeatUntil implements Operation {
+
+    int result = 0;
 
     @Override
     public String getTag() {
-        return getClass().getName();
+        return null;
     }
 
     @Override
     public Operation createOperation() {
-        List<Integer> integers = new ArrayList<>();
-        integers.add(1);
-        integers.add(2);
-        integers.add(3);
-        Observable.fromIterable(integers).subscribe(new Observer<Integer>() {
+        Observable<Integer> integerObservable =
+                Observable.create(emitter -> {
+                    emitter.onNext(1);
+                    emitter.onNext(2);
+                    emitter.onNext(3);
+                    emitter.onComplete();
+                });
+        integerObservable.repeatUntil(() -> {
+            if (result > 8) {
+                return true;
+            } else {
+                return false;
+            }
+        }).subscribe(new Observer<Integer>() {
             @Override
             public void onSubscribe(Disposable d) {
                 builder.append(StringEnum.CONNECT_MESSAGE).append('\n');
@@ -36,7 +44,8 @@ public class OperationFromIterable implements Operation {
 
             @Override
             public void onNext(Integer integer) {
-                builder.append(StringEnum.NEXT_MESSAGE + integer).append('\n');
+                result += integer;
+                builder.append(StringEnum.NEXT_MESSAGE).append(integer).append('\n');
             }
 
             @Override

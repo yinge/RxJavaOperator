@@ -1,7 +1,6 @@
 package com.yin.operators.operation.create;
 
-import android.util.Log;
-
+import com.yin.operators.StringEnum;
 import com.yin.operators.operation.Operation;
 
 import java.util.concurrent.TimeUnit;
@@ -26,26 +25,24 @@ public class OperationTimer implements Operation {
         Observable.timer(2, TimeUnit.SECONDS).subscribe(new Observer<Long>() {
             @Override
             public void onSubscribe(Disposable d) {
-
+                builder.append(StringEnum.CONNECT_MESSAGE).append('\n');
             }
 
             @Override
             public void onNext(Long aLong) {
-                Log.e(getTag(), "这个值是定死的。。。" + aLong);
+                builder.append("这个值是定死的。。。").append(aLong).append('\n');
             }
 
             @Override
             public void onError(Throwable e) {
-
+                builder.append(StringEnum.ERROR_MESSAGE).append('\n');
             }
 
             @Override
             public void onComplete() {
-
+                builder.append(StringEnum.COMPLETE_MESSAGE).append('\n');
             }
         });
-
-        Observable.timer(2, TimeUnit.SECONDS).subscribe(aLong -> Log.e(getTag(), "这个值是定死的。。。" + aLong));
         return this;
     }
 }

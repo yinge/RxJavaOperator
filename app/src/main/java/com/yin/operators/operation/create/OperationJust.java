@@ -1,7 +1,6 @@
 package com.yin.operators.operation.create;
 
-import android.util.Log;
-
+import com.yin.operators.StringEnum;
 import com.yin.operators.operation.Operation;
 
 import io.reactivex.Observable;
@@ -25,22 +24,22 @@ public class OperationJust implements Operation {
         Observable.just(1, 2, 3).subscribe(new Observer<Integer>() {
             @Override
             public void onSubscribe(Disposable d) {
-                Log.e(getTag(), "我连上了。。。");
+                builder.append(StringEnum.CONNECT_MESSAGE).append('\n');
             }
 
             @Override
             public void onNext(Integer integer) {
-                Log.e(getTag(), "下一个。。。" + integer);
+                builder.append(StringEnum.NEXT_MESSAGE + integer).append('\n');
             }
 
             @Override
             public void onError(Throwable e) {
-                Log.e(getTag(), "我错了。。。");
+                builder.append(StringEnum.ERROR_MESSAGE).append('\n');
             }
 
             @Override
             public void onComplete() {
-                Log.e(getTag(), "我完了。。。");
+                builder.append(StringEnum.COMPLETE_MESSAGE).append('\n');
             }
         });
         return this;
